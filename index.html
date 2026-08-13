@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vikram Kharvi is an applied AI researcher and engineer building reliable foundation-model systems, RL environments, and production AI infrastructure.">
+  <meta name="theme-color" content="#e8e0d0">
+  <title>Vikram Kharvi — Applied AI Field Notes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="paper-grain" aria-hidden="true"></div>
+
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a class="monogram" href="#top" aria-label="Vikram Kharvi, home">VK<span class="ink-dot"></span></a>
+    <div class="nav-links">
+      <a href="https://blog.artofcyberai.com/">Blog</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+    </div>
+    <a class="nav-site" href="https://blog.artofcyberai.com/" target="_blank" rel="noreferrer">Read blog <span aria-hidden="true">↗</span></a>
+  </nav>
+
+  <header class="hero" id="top">
+    <p class="margin-code" aria-hidden="true">FIELD NOTES / 2026</p>
+    <div class="hero-copy reveal is-visible">
+      <p class="eyebrow"><span></span> Applied AI researcher + engineer</p>
+      <h1>I build AI systems that survive contact with the <em>real world.</em></h1>
+      <p class="hero-deck">From reinforcement-learning environments to foundation-model training and evaluation—six years turning ambitious research into infrastructure that works.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="https://blog.artofcyberai.com/">Explore the research series <span aria-hidden="true">↗</span></a>
+        <a class="text-link" href="mailto:vikramkrishnakharvi@gmail.com">Start a conversation <span aria-hidden="true">→</span></a>
+      </div>
+      <a class="current-work" href="https://blog.artofcyberai.com/">
+        <span><i aria-hidden="true"></i> Currently building</span>
+        <strong>RL environments that help LLMs learn from real tasks, feedback, and failure.</strong>
+        <b aria-hidden="true">→</b>
+      </a>
+    </div>
+
+    <div class="hero-visual reveal is-visible" data-parallax="0.035" aria-hidden="true">
+      <div class="diagram-paper">
+        <p class="diagram-label">ANATOMY OF A USEFUL MODEL</p>
+        <svg viewBox="0 0 540 430" role="img" aria-label="Hand-drawn loop connecting data, environments, evaluation, and deployment">
+          <defs>
+            <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+              <path d="M0,0 L0,6 L9,3 z" fill="currentColor"/>
+            </marker>
+          </defs>
+          <path class="orbit orbit-one" d="M89 217C112 78 305 44 430 131C535 205 469 356 309 375C151 394 52 313 89 217Z"/>
+          <path class="orbit orbit-two" d="M145 310C74 218 147 106 278 92C426 76 497 177 433 287C377 382 217 393 145 310Z"/>
+          <path class="arrow-path" d="M111 174C150 118 197 99 252 93" marker-end="url(#arrow)"/>
+          <path class="arrow-path" d="M382 115C437 153 456 204 450 252" marker-end="url(#arrow)"/>
+          <path class="arrow-path" d="M404 318C344 362 269 370 209 342" marker-end="url(#arrow)"/>
+          <circle cx="109" cy="216" r="43"/>
+          <circle cx="292" cy="91" r="48"/>
+          <circle cx="443" cy="273" r="48"/>
+          <circle cx="169" cy="329" r="48"/>
+          <text x="109" y="212" text-anchor="middle">DATA</text>
+          <text x="109" y="229" text-anchor="middle">+ SIGNAL</text>
+          <text x="292" y="87" text-anchor="middle">RL</text>
+          <text x="292" y="104" text-anchor="middle">ENVIRONMENTS</text>
+          <text x="443" y="269" text-anchor="middle">EVALUATE</text>
+          <text x="443" y="286" text-anchor="middle">FAILURES</text>
+          <text x="169" y="325" text-anchor="middle">SHIP +</text>
+          <text x="169" y="342" text-anchor="middle">OBSERVE</text>
+          <path class="scribble" d="M252 222c24-47 63-49 83-20 21 31-9 77-53 70-35-5-46-29-30-50Z"/>
+          <text class="center-text" x="291" y="231" text-anchor="middle">LEARN</text>
+          <text class="center-text" x="291" y="250" text-anchor="middle">THE LOOP</text>
+        </svg>
+        <p class="diagram-note">No model is finished.<br>Only better observed.</p>
+      </div>
+      <span class="tape tape-top"></span>
+      <span class="tape tape-bottom"></span>
+    </div>
+
+    <div class="hero-metrics reveal is-visible">
+      <div><strong>6+</strong><span>years building<br>applied AI</span></div>
+      <div><strong>80%</strong><span>faster model<br>deployment</span></div>
+      <div><strong>13→5</strong><span>task-specific<br>perplexity</span></div>
+    </div>
+    <a class="scroll-cue" href="#manifesto"><span>Scroll to explore</span><i aria-hidden="true"></i></a>
+  </header>
+
+  <main id="main">
+    <section class="manifesto" id="manifesto" aria-labelledby="manifesto-title">
+      <p class="section-index">01 / Point of view</p>
+      <div class="manifesto-copy reveal">
+        <svg class="quote-mark" viewBox="0 0 100 82" aria-hidden="true"><path d="M37 0C15 14 2 35 2 57c0 17 9 25 21 25 12 0 21-9 21-21 0-11-8-20-19-20 3-12 11-23 22-33L37 0Zm53 0C68 14 55 35 55 57c0 17 9 25 21 25 12 0 21-9 21-21 0-11-8-20-19-20 3-12 11-23 22-33L90 0Z"/></svg>
+        <h2 id="manifesto-title">The interesting work begins where the demo ends.</h2>
+        <p>I care about the full learning loop: the data we choose, the worlds we ask models to navigate, the failures we measure, and the systems that carry those lessons into production.</p>
+      </div>
+      <p class="side-note reveal">Research should leave the notebook.<br><span>— VK</span></p>
+    </section>
+
+    <section class="notes" id="notes" aria-labelledby="notes-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-index">02 / Field notes</p>
+          <h2 id="notes-title">Ideas from the workbench</h2>
+        </div>
+        <p>Notes on alignment, RL environments, and the signals that help language models improve through experience.</p>
+      </div>
+
+      <div class="note-grid">
+        <article class="note-card note-featured reveal">
+          <a href="https://blog.artofcyberai.com/post-evals-rl-environments.html" aria-label="Read issue one: Evals and RL environments are the same machine with different jobs">
+            <div class="note-meta"><span>Evals + RL</span><time datetime="2026-08-13">Issue 01 / 09</time></div>
+            <div class="note-sketch note-sketch-alignment" aria-hidden="true">
+              <span class="scale-beam"></span><span class="scale-left"></span><span class="scale-right"></span><span class="scale-base"></span>
+              <small>preference</small><small>capability</small>
+            </div>
+            <h3>One machine. Two different jobs.</h3>
+            <p>Prompt, environment, and grader form the shared architecture underneath evaluation and reinforcement learning.</p>
+            <span class="read-link">Read issue 01 <b>↗</b></span>
+          </a>
+        </article>
+
+        <div class="note-focus reveal">
+          <p><i aria-hidden="true"></i> Current research focus</p>
+          <h3>What the environment makes observable</h3>
+          <ul>
+            <li><span>01</span> Planning across multiple steps</li>
+            <li><span>02</span> Choosing and using the right tools</li>
+            <li><span>03</span> Recovering when an action fails</li>
+            <li><span>04</span> Reaching a verifiable outcome</li>
+          </ul>
+          <a href="https://blog.artofcyberai.com/">Read the full research log <b>→</b></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-strip" aria-label="Expanded field notes">
+      <article class="field-note reveal" id="alignment-note">
+        <div class="article-kicker"><span>01</span> The shared structure</div>
+        <div>
+          <h3>Measurement and learning belong in one conversation.</h3>
+          <p>Evals tell researchers where a model is. RL environments create the experiences that move it. The nine-part series begins with the architecture they share, then follows the signal through graders, long-horizon agents, continual learning, human judgment, and trajectory design.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="work" id="work" aria-labelledby="work-title">
+      <div class="work-intro reveal">
+        <p class="section-index">03 / Selected work</p>
+        <h2 id="work-title">Building across the whole AI stack.</h2>
+        <p>Research, data, infrastructure, deployment—the hard problems rarely respect team boundaries.</p>
+      </div>
+
+      <div class="timeline" role="list">
+        <article class="timeline-item reveal" role="listitem">
+          <div class="timeline-date">2025—Now</div>
+          <div class="timeline-marker" aria-hidden="true"><span></span></div>
+          <div class="timeline-copy">
+            <div class="role-heading"><h3>Senior AI/ML Engineer</h3><p>Labelbox</p></div>
+            <p>Translating frontier-lab requirements into production RL data and environments; evaluating capability gaps across terminal, software, and cognitive tasks.</p>
+            <div class="tag-row"><span>RL gyms</span><span>Evaluation</span><span>RLHF / RLAIF</span></div>
+          </div>
+        </article>
+        <article class="timeline-item reveal" role="listitem">
+          <div class="timeline-date">2024—2025</div>
+          <div class="timeline-marker" aria-hidden="true"><span></span></div>
+          <div class="timeline-copy">
+            <div class="role-heading"><h3>Principal AI Developer</h3><p>HTC Inc</p></div>
+            <p>Built hot-swap model adapters that cut deployment time by 80% and architected an end-to-end AI workflow management system.</p>
+            <div class="tag-row"><span>Model adapters</span><span>Fine-tuning</span><span>MLOps</span></div>
+          </div>
+        </article>
+        <article class="timeline-item reveal" role="listitem">
+          <div class="timeline-date">2023—2024</div>
+          <div class="timeline-marker" aria-hidden="true"><span></span></div>
+          <div class="timeline-copy">
+            <div class="role-heading"><h3>Senior Applied AI Scientist</h3><p>Usable Machines</p></div>
+            <p>Built on the WhiteRabbitNeo foundation model and reduced task perplexity from 13 to 5 through preference optimization and task-specific fine-tuning.</p>
+            <div class="tag-row"><span>Foundation models</span><span>RLHF / RLAIF</span><span>Fine-tuning</span></div>
+          </div>
+        </article>
+        <article class="timeline-item reveal" role="listitem">
+          <div class="timeline-date">2023</div>
+          <div class="timeline-marker" aria-hidden="true"><span></span></div>
+          <div class="timeline-copy">
+            <div class="role-heading"><h3>Adjunct Lecturer, NLP</h3><p>Northwestern University</p></div>
+            <p>Created a build-an-LLM course and researched controlled legal-text generation with T5, reaching a ROUGE-L F1 score of 0.44.</p>
+            <div class="tag-row"><span>NLP</span><span>Teaching</span><span>T5</span></div>
+          </div>
+        </article>
+        <article class="timeline-item reveal" role="listitem">
+          <div class="timeline-date">2020—2021</div>
+          <div class="timeline-marker" aria-hidden="true"><span></span></div>
+          <div class="timeline-copy">
+            <div class="role-heading"><h3>Principal AI Developer</h3><p>Code Techniq</p></div>
+            <p>Led an eight-person engineering team, built browser-based vision systems, and designed NLP pipelines for knowledge and medical applications.</p>
+            <div class="tag-row"><span>BERT</span><span>TensorFlow.js</span><span>ML systems</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="about-paper reveal">
+        <p class="section-index">04 / About</p>
+        <div class="about-grid">
+          <h2 id="about-title">Researcher’s curiosity.<br>Engineer’s discipline.</h2>
+          <div class="about-copy">
+            <p>I’m Vikram Kharvi, an applied AI researcher and engineer in California. I’ve worked across the AI lifecycle—from training and preference optimization to evaluation, deployment, and monitoring.</p>
+            <p>I hold a Master of Artificial Intelligence from Northwestern University and a Bachelor of Information Science Engineering from PES University.</p>
+          </div>
+        </div>
+        <div class="credential-row">
+          <div><span>Education</span><strong>Northwestern University</strong><small>MS, Artificial Intelligence · 3.8/4</small></div>
+          <div><span>Recognition</span><strong>Hack2Innovate Winner</strong><small>Samsung · NVIDIA · PWC · T-Hub</small></div>
+          <div><span>Certification</span><strong>NVIDIA Agentic AI</strong><small>Certified Professional</small></div>
+        </div>
+      </div>
+
+      <div class="skills-marquee" aria-label="Technical skills">
+        <div>
+          <span>PYTORCH</span><i>✦</i><span>TRANSFORMERS</span><i>✦</i><span>RLHF</span><i>✦</i><span>RL ENVIRONMENTS</span><i>✦</i><span>AGENT EVALUATION</span><i>✦</i><span>KUBERNETES</span><i>✦</i><span>PYTHON</span><i>✦</i><span>MODEL EVALUATION</span><i>✦</i>
+          <span>PYTORCH</span><i>✦</i><span>TRANSFORMERS</span><i>✦</i><span>RLHF</span><i>✦</i><span>RL ENVIRONMENTS</span><i>✦</i><span>AGENT EVALUATION</span><i>✦</i><span>KUBERNETES</span><i>✦</i><span>PYTHON</span><i>✦</i><span>MODEL EVALUATION</span><i>✦</i>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <p class="section-index">05 / Let’s talk</p>
+      <h2>Have a hard AI problem?</h2>
+      <a class="footer-email" href="mailto:vikramkrishnakharvi@gmail.com">vikramkrishnakharvi@gmail.com <span>↗</span></a>
+    </div>
+    <div class="footer-bottom">
+      <p>Vikram Kharvi · Applied AI Researcher & Engineer</p>
+      <p>California · <span id="local-time">Pacific time</span></p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
