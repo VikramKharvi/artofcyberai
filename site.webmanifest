@@ -1,0 +1,23 @@
+{
+  "name": "Vikram Kharvi — Applied AI Field Notes",
+  "short_name": "Art of Cyber AI",
+  "description": "Research notes on reinforcement learning, LLM post-training, evaluation, and efficient inference systems.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#e8e0d0",
+  "theme_color": "#a23c2e",
+  "icons": [
+    {
+      "src": "/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
