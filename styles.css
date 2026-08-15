@@ -284,6 +284,19 @@ main { overflow: clip; }
 .side-note { align-self: end; margin-bottom: 60px; font: italic 17px/1.4 var(--serif); color: #c8c2b6; transform: rotate(5deg); }
 .side-note span { color: var(--red); }
 
+.research-paths { width: var(--page); margin: 0 auto; padding: 150px 0 0; }
+.path-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.path-card { min-height: 390px; padding: 28px; position: relative; display: flex; flex-direction: column; border-right: 1px solid var(--ink); color: inherit; text-decoration: none; scroll-margin-top: 100px; }
+.path-card:last-child { border-right: 0; }
+.path-number { align-self: flex-end; color: rgba(162,60,46,.2); font: italic 68px/.8 var(--serif); }
+.path-kicker { margin: 25px 0 0; color: var(--red); font: 700 9px var(--mono); text-transform: uppercase; letter-spacing: .12em; }
+.path-card h3 { margin: auto 0 18px; font: 400 clamp(36px, 3.6vw, 52px)/1 var(--serif); letter-spacing: -.04em; }
+.path-card > p:not(.path-kicker) { margin: 0 0 34px; color: var(--muted); font: 15px/1.5 var(--serif); }
+.path-status { padding-top: 16px; border-top: 1px solid var(--line); font: 700 10px var(--mono); text-transform: uppercase; letter-spacing: .1em; }
+.path-status b { color: var(--red); font-size: 16px; }
+.path-card-link { transition: background .25s ease, transform .25s ease; }
+.path-card-link:hover, .path-card-link:focus-visible { background: var(--paper-light); transform: translateY(-5px); }
+
 .notes, .work { width: var(--page); margin: 0 auto; padding: 150px 0; }
 .section-heading { display: grid; grid-template-columns: 1fr 380px; gap: 70px; align-items: end; margin-bottom: 75px; }
 .section-heading h2, .work-intro h2, .about h2 { margin: 0; font: 400 clamp(48px, 5.2vw, 76px)/0.98 var(--serif); letter-spacing: -0.042em; }
@@ -564,6 +577,7 @@ footer { width: var(--page); margin: 0 auto; padding: 160px 0 45px; }
   .diagram-note { display: none; }
   .manifesto { grid-template-columns: 130px 1fr; }
   .manifesto .side-note { display: none; }
+  .path-card { min-height: 350px; }
   .note-grid { grid-template-columns: 1fr 1fr; }
   .note-card:first-child { grid-row: auto; }
   .note-card { min-height: 480px; }
@@ -602,6 +616,10 @@ footer { width: var(--page); margin: 0 auto; padding: 160px 0 45px; }
   .manifesto h2 { font-size: clamp(46px, 14vw, 70px); }
   .manifesto-copy p { margin: 32px 0 0; font-size: 16px; }
   .quote-mark { width: 42px; }
+  .research-paths { padding-top: 105px; }
+  .path-grid { grid-template-columns: 1fr; }
+  .path-card { min-height: 330px; border-right: 0; border-bottom: 1px solid var(--ink); }
+  .path-card:last-child { border-bottom: 0; }
   .notes, .work { padding: 105px 0; }
   .section-heading { display: block; margin-bottom: 50px; }
   .section-heading h2, .about h2 { font-size: 50px; }
