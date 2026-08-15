@@ -110,7 +110,7 @@
           <p class="path-kicker">Foundations</p>
           <h3>Pre-training</h3>
           <p>Data, tokenization, model architecture, and the systems that create foundation models.</p>
-          <span class="path-status">Explore on this site</span>
+          <span class="path-status">Research notes coming soon</span>
         </article>
 
         <a class="path-card path-card-link reveal" id="post-training" href="https://trainrl.com/">
@@ -121,12 +121,40 @@
           <span class="path-status">Open trainrl.com <b aria-hidden="true">↗</b></span>
         </a>
 
-        <article class="path-card reveal" id="inference">
+        <a class="path-card path-card-link reveal" id="inference" href="#inference-details">
           <span class="path-number">03</span>
           <p class="path-kicker">Serving</p>
           <h3>Inference</h3>
           <p>Paged KV caching, continuous batching, and fused kernels—how to keep the GPU busy at all times.</p>
-          <span class="path-status">Explore on this site</span>
+          <span class="path-status">Explore on this site <b aria-hidden="true">↓</b></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="inference-details" id="inference-details" aria-labelledby="inference-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-index">Inference systems</p>
+          <h2 id="inference-title">Keep the GPU busy.</h2>
+        </div>
+        <p>Efficient serving is a scheduling and memory problem: admit useful work continuously, move less data, and fuse the operations on the critical path.</p>
+      </div>
+
+      <div class="inference-grid">
+        <article class="reveal">
+          <span>01</span>
+          <h3>Paged KV caching</h3>
+          <p>Allocate attention memory in reusable blocks so variable-length requests waste less capacity and more sequences fit on each GPU.</p>
+        </article>
+        <article class="reveal">
+          <span>02</span>
+          <h3>Continuous batching</h3>
+          <p>Replace finished requests immediately instead of waiting for a static batch, keeping decode slots filled as traffic changes.</p>
+        </article>
+        <article class="reveal">
+          <span>03</span>
+          <h3>Fused kernels</h3>
+          <p>Combine adjacent GPU operations to reduce launches and memory movement, spending more time on useful computation.</p>
         </article>
       </div>
     </section>
