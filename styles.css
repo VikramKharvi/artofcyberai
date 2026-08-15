@@ -586,6 +586,8 @@ footer { width: var(--page); margin: 0 auto; padding: 160px 0 45px; }
   .manifesto { grid-template-columns: 130px 1fr; }
   .manifesto .side-note { display: none; }
   .path-card { min-height: 350px; }
+  .about-grid { grid-template-columns: 1fr; gap: 36px; }
+  .about-copy { max-width: 720px; padding-top: 0; }
   .note-grid { grid-template-columns: 1fr 1fr; }
   .note-card:first-child { grid-row: auto; }
   .note-card { min-height: 480px; }
