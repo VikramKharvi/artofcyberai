@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vikram Kharvi’s research notes on efficient LLM inference: KV-cache management, continuous batching, fused kernels, scheduling, latency, and GPU utilization.">
+  <meta name="author" content="Vikram Kharvi">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#e8e0d0">
+  <title>Inference Systems Blog | Art of Cyber AI</title>
+  <link rel="canonical" href="https://artofcyberai.com/inference/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="alternate" type="application/atom+xml" title="Art of Cyber AI research feed" href="https://artofcyberai.com/feed.xml">
+  <link rel="stylesheet" href="/styles.css?v=20260815-6">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-02V3VDQ7PP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-02V3VDQ7PP');
+  </script>
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Art of Cyber AI">
+  <meta property="og:url" content="https://artofcyberai.com/inference/">
+  <meta property="og:title" content="Inference Systems Blog | Art of Cyber AI">
+  <meta property="og:description" content="Research notes on keeping GPUs productive while serving large language models.">
+  <meta property="og:image" content="https://artofcyberai.com/og-image.png">
+  <meta property="og:image:alt" content="Art of Cyber AI inference systems research notes">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Inference Systems Blog | Art of Cyber AI">
+  <meta name="twitter:description" content="Research notes on KV caching, batching, kernels, scheduling, and efficient LLM serving.">
+  <meta name="twitter:image" content="https://artofcyberai.com/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": "https://artofcyberai.com/inference/#blog",
+    "url": "https://artofcyberai.com/inference/",
+    "name": "Inference Systems Blog",
+    "description": "Research notes on efficient large language model inference systems.",
+    "author": {
+      "@type": "Person",
+      "@id": "https://artofcyberai.com/#vikram-kharvi",
+      "name": "Vikram Kharvi"
+    }
+  }
+  </script>
+</head>
+<body class="blog-index-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="paper-grain" aria-hidden="true"></div>
+
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a class="monogram" href="/" aria-label="Vikram Kharvi, home">VK<span class="ink-dot"></span></a>
+    <div class="nav-links">
+      <a href="/pre-training/">Pre-training</a>
+      <a href="https://trainrl.com/">Post-training <span aria-hidden="true">↗</span></a>
+      <a href="/inference/" aria-current="page">Inference</a>
+    </div>
+    <a class="nav-site" href="/">Home <span aria-hidden="true">↑</span></a>
+  </nav>
+
+  <header class="series-hero">
+    <div>
+      <a class="back-link" href="/">← Art of Cyber AI</a>
+      <p class="eyebrow"><span></span> Serving systems research</p>
+      <h1><em>Infer-</em><br>ence</h1>
+    </div>
+    <div class="series-intro">
+      <p class="series-count">Systems notebook / live</p>
+      <p>Memory, scheduling, batching, and kernels—the systems work required to keep useful tokens flowing and GPUs busy.</p>
+      <a href="/#inference-details">Read the overview <span>→</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="title-board" aria-labelledby="inference-notes-title">
+      <div class="title-board-heading">
+        <div>
+          <p class="section-index">Inference / Index</p>
+          <h2 id="inference-notes-title">Serving field notes.</h2>
+        </div>
+        <p>Notes on the memory and scheduling problems behind low-latency, high-throughput model serving.</p>
+      </div>
+
+      <ol class="title-list">
+        <li class="title-item is-published">
+          <a href="/#inference-details">
+            <span class="issue-number">01</span>
+            <div class="issue-copy">
+              <div class="issue-meta"><span>Overview</span><span>Published</span></div>
+              <h3>Keep the GPU busy</h3>
+              <p>Paged KV caching, continuous batching, and fused kernels as one serving-systems problem.</p>
+            </div>
+            <span class="issue-action">Read overview <b>↗</b></span>
+          </a>
+        </li>
+        <li class="title-item">
+          <div>
+            <span class="issue-number">02</span>
+            <div class="issue-copy">
+              <div class="issue-meta"><span>Memory</span><span>Planned</span></div>
+              <h3>Paged KV caching</h3>
+              <p>Block-based attention memory and the fragmentation problem in variable-length serving.</p>
+            </div>
+            <span class="issue-status">In development</span>
+          </div>
+        </li>
+        <li class="title-item">
+          <div>
+            <span class="issue-number">03</span>
+            <div class="issue-copy">
+              <div class="issue-meta"><span>Scheduling</span><span>Planned</span></div>
+              <h3>Continuous batching</h3>
+              <p>Iteration-level scheduling, request turnover, and keeping decode slots productive.</p>
+            </div>
+            <span class="issue-status">In development</span>
+          </div>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <p class="section-index">Research feed</p>
+      <h2>Follow the work.</h2>
+      <a class="footer-email" href="/feed.xml">Subscribe via RSS <span>↗</span></a>
+    </div>
+    <div class="footer-bottom">
+      <p>Vikram Kharvi · Applied AI Researcher &amp; Engineer</p>
+      <p>Inference systems research</p>
+      <a href="/">Home ↑</a>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

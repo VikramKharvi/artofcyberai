@@ -4,4 +4,12 @@
     <loc>https://artofcyberai.com/</loc>
     <lastmod>2026-08-15</lastmod>
   </url>
+  <url>
+    <loc>https://artofcyberai.com/pre-training/</loc>
+    <lastmod>2026-08-15</lastmod>
+  </url>
+  <url>
+    <loc>https://artofcyberai.com/inference/</loc>
+    <lastmod>2026-08-15</lastmod>
+  </url>
 </urlset>
