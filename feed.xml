@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Art of Cyber AI — Research Feed</title>
+  <subtitle>Field notes on reinforcement learning, LLM post-training, agent evaluation, and efficient inference.</subtitle>
+  <link href="https://artofcyberai.com/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://artofcyberai.com/" rel="alternate" type="text/html"/>
+  <id>https://artofcyberai.com/</id>
+  <updated>2026-08-15T12:00:00-07:00</updated>
+  <author>
+    <name>Vikram Kharvi</name>
+    <uri>https://artofcyberai.com/</uri>
+  </author>
+  <entry>
+    <title>One machine. Two different jobs.</title>
+    <link href="https://trainrl.com/post-evals-rl-environments.html" rel="alternate" type="text/html"/>
+    <id>https://trainrl.com/post-evals-rl-environments.html</id>
+    <published>2026-08-15T12:00:00-07:00</published>
+    <updated>2026-08-15T12:00:00-07:00</updated>
+    <summary>Why post-training evaluation and reinforcement-learning environments need different abstractions, even when they run on the same machine.</summary>
+  </entry>
+</feed>
