@@ -250,34 +250,6 @@
       <p class="side-note reveal">Research should leave the notebook.<br><span>— VK</span></p>
     </section>
 
-    <section class="inference-details" id="inference-details" aria-labelledby="inference-title">
-      <div class="section-heading reveal">
-        <div>
-          <p class="section-index">Inference systems</p>
-          <h2 id="inference-title">Keep the GPU busy.</h2>
-        </div>
-        <p>Efficient serving is a scheduling and memory problem: admit useful work continuously, move less data, and fuse the operations on the critical path.</p>
-      </div>
-
-      <div class="inference-grid">
-        <article class="reveal">
-          <span>01</span>
-          <h3>Paged KV caching</h3>
-          <p>Allocate attention memory in reusable blocks so variable-length requests waste less capacity and more sequences fit on each GPU.</p>
-        </article>
-        <article class="reveal">
-          <span>02</span>
-          <h3>Continuous batching</h3>
-          <p>Replace finished requests immediately instead of waiting for a static batch, keeping decode slots filled as traffic changes.</p>
-        </article>
-        <article class="reveal">
-          <span>03</span>
-          <h3>Fused kernels</h3>
-          <p>Combine adjacent GPU operations to reduce launches and memory movement, spending more time on useful computation.</p>
-        </article>
-      </div>
-    </section>
-
     <section class="notes" id="notes" aria-labelledby="notes-title">
       <div class="section-heading reveal">
         <div>
