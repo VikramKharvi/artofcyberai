@@ -371,7 +371,7 @@ main { overflow: clip; }
 .tag-row span { padding: 7px 10px 6px; border: 1px solid var(--line); border-radius: 20px; font: 9px var(--mono); text-transform: uppercase; letter-spacing: 0.08em; }
 
 .about { padding-top: 130px; }
-.about-paper { width: min(1350px, calc(100vw - 32px)); margin: 0 auto; padding: 95px max(32px, calc((100% - 1176px)/2)); background: var(--paper-light); border: 1px solid var(--ink); box-shadow: 12px 15px 0 var(--ink); transform: rotate(0.35deg); }
+.about-paper { width: min(1350px, calc(100vw - 32px)); margin: 0 auto; padding: 95px clamp(32px, calc((100vw - 1176px)/2), 87px); background: var(--paper-light); border: 1px solid var(--ink); box-shadow: 12px 15px 0 var(--ink); transform: rotate(0.35deg); }
 .about-grid { display: grid; grid-template-columns: 1fr 0.8fr; gap: 80px; align-items: start; }
 .about-grid h2 { transform: rotate(-0.35deg); }
 .about-copy { padding-top: 8px; }
