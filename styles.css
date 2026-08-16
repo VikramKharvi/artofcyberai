@@ -511,14 +511,14 @@ footer { width: var(--page); margin: 0 auto; padding: 160px 0 45px; }
 .blog-index-page .title-board-heading > p { font-size: 13px; line-height: 1.25; }
 .blog-index-page .title-list { display: grid; grid-template-columns: repeat(3,1fr); border-left: 1px solid var(--ink); }
 .blog-index-page .title-item { border-right: 1px solid var(--ink); }
-.blog-index-page .title-item > a, .blog-index-page .title-item > div { min-height: 120px; padding: 14px 40px 13px 14px; position: relative; display: block; }
+.blog-index-page .title-item > a { min-height: 120px; padding: 14px 40px 13px 14px; position: relative; display: block; }
 .blog-index-page .title-item > a:hover { padding-left: 14px; background: var(--paper-light); }
 .blog-index-page .issue-number { position: absolute; top: 12px; right: 13px; font-size: 25px; }
 .blog-index-page .issue-meta { margin-bottom: 9px; font-size: 7px; line-height: 1.2; }
 .blog-index-page .issue-meta span + span { display: none; }
 .blog-index-page .issue-copy h3 { margin: 0; font-size: clamp(18px,1.65vw,23px); line-height: 1.02; }
 .blog-index-page .issue-copy > p { display: none; }
-.blog-index-page .issue-action, .blog-index-page .issue-status { position: absolute; right: 13px; bottom: 9px; font-size: 7px; }
+.blog-index-page .issue-action { position: absolute; right: 13px; bottom: 9px; font-size: 7px; }
 .blog-index-page .issue-action b { font-size: 13px; }
 
 /* Published essay */
@@ -723,16 +723,15 @@ footer { width: var(--page); margin: 0 auto; padding: 160px 0 45px; }
   .first-issue { padding: 75px 26px; }
   .first-issue h2 { font-size: 59px; }
   .blog-index-page .series-hero { min-height: 0; padding: 34px 0 30px; display: block; }
-  .blog-index-page .site-nav { height: 106px; }
   .blog-index-page .series-hero h1 { font-size: 58px; }
   .blog-index-page .series-intro { margin-top: 28px; padding-left: 18px; }
   .blog-index-page .title-board { padding: 24px 0 70px; }
   .blog-index-page .title-board-heading { display: block; margin-bottom: 20px; }
   .blog-index-page .title-board-heading > p { margin-top: 10px; }
   .blog-index-page .title-list { grid-template-columns: 1fr; }
-  .blog-index-page .title-item > a, .blog-index-page .title-item > div { min-height: 104px; padding: 14px 44px 13px 14px; display: block; }
+  .blog-index-page .title-item > a { min-height: 104px; padding: 14px 44px 13px 14px; display: block; }
   .blog-index-page .title-item > a:hover { padding-left: 14px; }
-  .blog-index-page .issue-action, .blog-index-page .issue-status { grid-column: auto; margin-top: 0; }
+  .blog-index-page .issue-action { grid-column: auto; margin-top: 0; }
   .post-hero h1 { font-size: clamp(47px,13.7vw,63px); }
   .machine-paper { min-height: 620px; padding: 18px; }
   .machine-core { margin-top: 42px; grid-template-columns: 1fr; justify-items: center; }
