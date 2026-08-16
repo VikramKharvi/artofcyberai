@@ -15,7 +15,7 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="alternate" type="application/atom+xml" title="Art of Cyber AI research feed" href="https://artofcyberai.com/feed.xml">
-  <link rel="stylesheet" href="styles.css?v=20260815-5">
+  <link rel="stylesheet" href="styles.css?v=20260816-1">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-02V3VDQ7PP"></script>
   <script>
@@ -79,9 +79,9 @@
   <nav class="site-nav" aria-label="Primary navigation">
     <a class="monogram" href="#top" aria-label="Vikram Kharvi, home">VK<span class="ink-dot"></span></a>
     <div class="nav-links">
-      <a href="https://trainrl.com/blog.html#tech-notes">Pre-training</a>
-      <a href="https://trainrl.com/blog.html#post-training">Post-training</a>
-      <a href="https://trainrl.com/blog.html#serving">Inference</a>
+      <a href="https://pre-trained.artofcyberai.com/">Pre-trained</a>
+      <a href="https://trainrl.com/">Post-trained</a>
+      <a href="https://inference.artofcyberai.com/">Inference</a>
     </div>
     <a class="nav-site" href="#about">About <span aria-hidden="true">↓</span></a>
   </nav>
@@ -144,134 +144,49 @@
       <div><strong>80%</strong><span>faster model<br>deployment</span></div>
       <div><strong>13→5</strong><span>task-specific<br>perplexity</span></div>
     </div>
-    <a class="scroll-cue" href="#manifesto"><span>Scroll to explore</span><i aria-hidden="true"></i></a>
+    <a class="scroll-cue" href="#research-paths"><span>Scroll to explore</span><i aria-hidden="true"></i></a>
   </header>
 
   <main id="main">
-    <section class="manifesto" id="manifesto" aria-labelledby="manifesto-title">
-      <p class="section-index">01 / Point of view</p>
-      <div class="manifesto-copy reveal">
-        <svg class="quote-mark" viewBox="0 0 100 82" aria-hidden="true"><path d="M37 0C15 14 2 35 2 57c0 17 9 25 21 25 12 0 21-9 21-21 0-11-8-20-19-20 3-12 11-23 22-33L37 0Zm53 0C68 14 55 35 55 57c0 17 9 25 21 25 12 0 21-9 21-21 0-11-8-20-19-20 3-12 11-23 22-33L90 0Z"/></svg>
-        <h2 id="manifesto-title">The interesting work begins where the demo ends.</h2>
-        <p>I care about the full learning loop: the data we choose, the worlds we ask models to navigate, the failures we measure, and the systems that carry those lessons into production.</p>
-      </div>
-      <p class="side-note reveal">Research should leave the notebook.<br><span>— VK</span></p>
-    </section>
-
     <section class="research-paths" id="research-paths" aria-labelledby="paths-title">
       <div class="section-heading reveal">
         <div>
-          <p class="section-index">02 / Research paths</p>
+          <p class="section-index">01 / Research paths</p>
           <h2 id="paths-title">Follow the model lifecycle.</h2>
         </div>
         <p>Three connected bodies of work: how models learn, how they improve through feedback, and how they run reliably in production.</p>
       </div>
 
       <div class="path-grid">
-        <a class="path-card path-card-link reveal" id="pre-training" href="https://trainrl.com/blog.html#tech-notes">
+        <a class="path-card path-card-link reveal" id="pre-training" href="https://pre-trained.artofcyberai.com/">
           <span class="path-number">01</span>
           <p class="path-kicker">Foundations</p>
-          <h3>Pre-training</h3>
+          <h3>Pre-trained</h3>
           <p>Data, tokenization, model architecture, and the systems that create foundation models.</p>
-          <span class="path-status">Read Pre-training articles <b aria-hidden="true">↗</b></span>
+          <span class="path-status">Explore 15 pre-training chapters <b aria-hidden="true">↗</b></span>
         </a>
 
-        <a class="path-card path-card-link reveal" id="post-training" href="https://trainrl.com/blog.html#post-training">
+        <a class="path-card path-card-link reveal" id="post-training" href="https://trainrl.com/">
           <span class="path-number">02</span>
           <p class="path-kicker">TrainRL</p>
-          <h3>Post-training</h3>
+          <h3>Post-trained</h3>
           <p>Reinforcement learning, environments, graders, evaluations, and specialist agents.</p>
-          <span class="path-status">Read Post-training articles <b aria-hidden="true">↗</b></span>
+          <span class="path-status">Explore 10 post-training chapters <b aria-hidden="true">↗</b></span>
         </a>
 
-        <a class="path-card path-card-link reveal" id="inference" href="https://trainrl.com/blog.html#serving">
+        <a class="path-card path-card-link reveal" id="inference" href="https://inference.artofcyberai.com/">
           <span class="path-number">03</span>
           <p class="path-kicker">Serving</p>
           <h3>Inference</h3>
           <p>Paged KV caching, continuous batching, and fused kernels—how to keep the GPU busy at all times.</p>
-          <span class="path-status">Read Inference articles <b aria-hidden="true">↗</b></span>
+          <span class="path-status">Explore 10 inference chapters <b aria-hidden="true">↗</b></span>
         </a>
       </div>
     </section>
 
-    <section class="inference-details" id="inference-details" aria-labelledby="inference-title">
-      <div class="section-heading reveal">
-        <div>
-          <p class="section-index">Inference systems</p>
-          <h2 id="inference-title">Keep the GPU busy.</h2>
-        </div>
-        <p>Efficient serving is a scheduling and memory problem: admit useful work continuously, move less data, and fuse the operations on the critical path.</p>
-      </div>
-
-      <div class="inference-grid">
-        <article class="reveal">
-          <span>01</span>
-          <h3>Paged KV caching</h3>
-          <p>Allocate attention memory in reusable blocks so variable-length requests waste less capacity and more sequences fit on each GPU.</p>
-        </article>
-        <article class="reveal">
-          <span>02</span>
-          <h3>Continuous batching</h3>
-          <p>Replace finished requests immediately instead of waiting for a static batch, keeping decode slots filled as traffic changes.</p>
-        </article>
-        <article class="reveal">
-          <span>03</span>
-          <h3>Fused kernels</h3>
-          <p>Combine adjacent GPU operations to reduce launches and memory movement, spending more time on useful computation.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="notes" id="notes" aria-labelledby="notes-title">
-      <div class="section-heading reveal">
-        <div>
-          <p class="section-index">03 / Field notes</p>
-          <h2 id="notes-title">Ideas from the workbench</h2>
-        </div>
-        <p>Notes on alignment, RL environments, and the signals that help language models improve through experience.</p>
-      </div>
-
-      <div class="note-grid">
-        <article class="note-card note-featured reveal">
-          <a href="https://trainrl.com/post-evals-rl-environments.html" aria-label="Read issue one: Evals and RL environments are the same machine with different jobs">
-            <div class="note-meta"><span>Evals + RL</span><time datetime="2026-08-13">Issue 01 / 09</time></div>
-            <div class="note-sketch note-sketch-alignment" aria-hidden="true">
-              <span class="scale-beam"></span><span class="scale-left"></span><span class="scale-right"></span><span class="scale-base"></span>
-              <small>preference</small><small>capability</small>
-            </div>
-            <h3>One machine. Two different jobs.</h3>
-            <p>Prompt, environment, and grader form the shared architecture underneath evaluation and reinforcement learning.</p>
-            <span class="read-link">Read issue 01 <b>↗</b></span>
-          </a>
-        </article>
-
-        <div class="note-focus reveal">
-          <p><i aria-hidden="true"></i> Current research focus</p>
-          <h3>What the environment makes observable</h3>
-          <ul>
-            <li><span>01</span> Planning across multiple steps</li>
-            <li><span>02</span> Choosing and using the right tools</li>
-            <li><span>03</span> Recovering when an action fails</li>
-            <li><span>04</span> Reaching a verifiable outcome</li>
-          </ul>
-          <a href="https://trainrl.com/blog.html">Read the full research log <b>↗</b></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="article-strip" aria-label="Expanded field notes">
-      <article class="field-note reveal" id="alignment-note">
-        <div class="article-kicker"><span>01</span> The shared structure</div>
-        <div>
-          <h3>Measurement and learning belong in one conversation.</h3>
-          <p>Evals tell researchers where a model is. RL environments create the experiences that move it. The nine-part series begins with the architecture they share, then follows the signal through graders, long-horizon agents, continual learning, human judgment, and trajectory design.</p>
-        </div>
-      </article>
-    </section>
-
     <section class="work" id="work" aria-labelledby="work-title">
       <div class="work-intro reveal">
-        <p class="section-index">04 / Selected work</p>
+        <p class="section-index">02 / Experience</p>
         <h2 id="work-title">Building across the whole AI stack.</h2>
         <p>Research, data, infrastructure, deployment—the hard problems rarely respect team boundaries.</p>
       </div>
@@ -325,6 +240,91 @@
       </div>
     </section>
 
+    <section class="manifesto" id="manifesto" aria-labelledby="manifesto-title">
+      <p class="section-index">03 / Point of view</p>
+      <div class="manifesto-copy reveal">
+        <svg class="quote-mark" viewBox="0 0 100 82" aria-hidden="true"><path d="M37 0C15 14 2 35 2 57c0 17 9 25 21 25 12 0 21-9 21-21 0-11-8-20-19-20 3-12 11-23 22-33L37 0Zm53 0C68 14 55 35 55 57c0 17 9 25 21 25 12 0 21-9 21-21 0-11-8-20-19-20 3-12 11-23 22-33L90 0Z"/></svg>
+        <h2 id="manifesto-title">The interesting work begins where the demo ends.</h2>
+        <p>I care about the full learning loop: the data we choose, the worlds we ask models to navigate, the failures we measure, and the systems that carry those lessons into production.</p>
+      </div>
+      <p class="side-note reveal">Research should leave the notebook.<br><span>— VK</span></p>
+    </section>
+
+    <section class="inference-details" id="inference-details" aria-labelledby="inference-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-index">Inference systems</p>
+          <h2 id="inference-title">Keep the GPU busy.</h2>
+        </div>
+        <p>Efficient serving is a scheduling and memory problem: admit useful work continuously, move less data, and fuse the operations on the critical path.</p>
+      </div>
+
+      <div class="inference-grid">
+        <article class="reveal">
+          <span>01</span>
+          <h3>Paged KV caching</h3>
+          <p>Allocate attention memory in reusable blocks so variable-length requests waste less capacity and more sequences fit on each GPU.</p>
+        </article>
+        <article class="reveal">
+          <span>02</span>
+          <h3>Continuous batching</h3>
+          <p>Replace finished requests immediately instead of waiting for a static batch, keeping decode slots filled as traffic changes.</p>
+        </article>
+        <article class="reveal">
+          <span>03</span>
+          <h3>Fused kernels</h3>
+          <p>Combine adjacent GPU operations to reduce launches and memory movement, spending more time on useful computation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="notes" id="notes" aria-labelledby="notes-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-index">04 / Ideas from the workbench</p>
+          <h2 id="notes-title">Ideas from the workbench</h2>
+        </div>
+        <p>Notes on alignment, RL environments, and the signals that help language models improve through experience.</p>
+      </div>
+
+      <div class="note-grid">
+        <article class="note-card note-featured reveal">
+          <a href="https://trainrl.com/post-evals-rl-environments.html" aria-label="Read issue one: Evals and RL environments are the same machine with different jobs">
+            <div class="note-meta"><span>Evals + RL</span><time datetime="2026-08-13">Chapter 02 / 10</time></div>
+            <div class="note-sketch note-sketch-alignment" aria-hidden="true">
+              <span class="scale-beam"></span><span class="scale-left"></span><span class="scale-right"></span><span class="scale-base"></span>
+              <small>preference</small><small>capability</small>
+            </div>
+            <h3>One machine. Two different jobs.</h3>
+            <p>Prompt, environment, and grader form the shared architecture underneath evaluation and reinforcement learning.</p>
+            <span class="read-link">Read chapter 02 <b>↗</b></span>
+          </a>
+        </article>
+
+        <div class="note-focus reveal">
+          <p><i aria-hidden="true"></i> Current research focus</p>
+          <h3>What the environment makes observable</h3>
+          <ul>
+            <li><span>01</span> Planning across multiple steps</li>
+            <li><span>02</span> Choosing and using the right tools</li>
+            <li><span>03</span> Recovering when an action fails</li>
+            <li><span>04</span> Reaching a verifiable outcome</li>
+          </ul>
+          <a href="https://trainrl.com/">Read the post-training research log <b>↗</b></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-strip" aria-label="Expanded field notes">
+      <article class="field-note reveal" id="alignment-note">
+        <div class="article-kicker"><span>01</span> The shared structure</div>
+        <div>
+          <h3>Measurement and learning belong in one conversation.</h3>
+          <p>Evals tell researchers where a model is. RL environments create the experiences that move it. The post-training collection begins with the architecture they share, then follows the signal through graders, long-horizon agents, continual learning, human judgment, and trajectory design.</p>
+        </div>
+      </article>
+    </section>
+
     <section class="about" id="about" aria-labelledby="about-title">
       <div class="about-paper reveal">
         <p class="section-index">05 / About</p>
@@ -363,6 +363,14 @@
         </div>
       </div>
     </section>
+
+
+
+
+
+
+
+
   </main>
 
   <footer>

@@ -582,7 +582,7 @@ footer { width: var(--page); margin: 0 auto; padding: 160px 0 45px; }
 .next-issue h2 { max-width: 900px; margin: 25px 0 15px; font: 400 clamp(43px,5vw,70px)/1 var(--serif); letter-spacing: -.04em; }
 .next-issue p { margin: 0; font: 17px var(--serif); color: var(--muted); }
 
-.reveal { opacity: 0; transform: translateY(34px); transition: opacity 0.75s ease, transform 0.75s cubic-bezier(.2,.7,.2,1); }
+.reveal { opacity: 1; transform: translateY(24px); transition: transform 0.55s cubic-bezier(.2,.7,.2,1); }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
 .note-card:nth-child(2).reveal { transition-delay: 0.1s; }
 .note-card:nth-child(3).reveal { transition-delay: 0.2s; }
