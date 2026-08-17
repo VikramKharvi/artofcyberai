@@ -28,8 +28,8 @@
   </entry>
   <entry>
     <title>Pre-training a language model</title>
-    <link href="https://pre-trained.artofcyberai.com/tech-tokenization-model-design.html" rel="alternate" type="text/html"/>
-    <id>https://pre-trained.artofcyberai.com/tech-tokenization-model-design.html</id>
+    <link href="https://pre-trained.artofcyberai.com/pre-training-llm.html" rel="alternate" type="text/html"/>
+    <id>https://pre-trained.artofcyberai.com/pre-training-llm.html</id>
     <published>2026-08-13T12:00:00-07:00</published>
     <updated>2026-08-16T12:00:00-07:00</updated>
     <summary>A research runbook connecting corpus design, tokenization, Transformer training, distributed execution, checkpoints, and reproducible evidence.</summary>
