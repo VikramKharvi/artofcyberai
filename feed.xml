@@ -1,37 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Art of Cyber AI — Research Feed</title>
-  <subtitle>Field notes on reinforcement learning, LLM post-training, agent evaluation, and efficient inference.</subtitle>
+  <subtitle>Research releases on reinforcement learning, LLM post-training, agent evaluation, and efficient inference.</subtitle>
   <link href="https://artofcyberai.com/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://artofcyberai.com/" rel="alternate" type="text/html"/>
   <id>https://artofcyberai.com/</id>
-  <updated>2026-08-16T12:00:00-07:00</updated>
+  <updated>2026-08-24T12:00:00-07:00</updated>
   <author>
     <name>Vikram Kharvi</name>
     <uri>https://artofcyberai.com/</uri>
   </author>
   <entry>
-    <title>One machine. Two different jobs.</title>
-    <link href="https://trainrl.com/post-evals-rl-environments.html" rel="alternate" type="text/html"/>
-    <id>https://trainrl.com/post-evals-rl-environments.html</id>
-    <published>2026-08-15T12:00:00-07:00</published>
-    <updated>2026-08-15T12:00:00-07:00</updated>
-    <summary>Why post-training evaluation and reinforcement-learning environments need different abstractions, even when they run on the same machine.</summary>
-  </entry>
-  <entry>
-    <title>Inference begins with a service contract</title>
-    <link href="https://inference.artofcyberai.com/inference-service-contract.html" rel="alternate" type="text/html"/>
-    <id>https://inference.artofcyberai.com/inference-service-contract.html</id>
+    <title>Post-training Is a Stack</title>
+    <link href="https://trainrl.com/post-training-stack.html" rel="alternate" type="text/html"/>
+    <id>https://trainrl.com/post-training-stack.html</id>
     <published>2026-08-13T12:00:00-07:00</published>
-    <updated>2026-08-16T12:00:00-07:00</updated>
-    <summary>Define time to first token, inter-token latency, throughput, availability, workload shape, and cost before choosing serving hardware.</summary>
-  </entry>
-  <entry>
-    <title>Pre-training a language model</title>
-    <link href="https://pre-trained.artofcyberai.com/pre-training-llm.html" rel="alternate" type="text/html"/>
-    <id>https://pre-trained.artofcyberai.com/pre-training-llm.html</id>
-    <published>2026-08-13T12:00:00-07:00</published>
-    <updated>2026-08-16T12:00:00-07:00</updated>
-    <summary>A research runbook connecting corpus design, tokenization, Transformer training, distributed execution, checkpoints, and reproducible evidence.</summary>
+    <updated>2026-08-24T12:00:00-07:00</updated>
+    <summary>The full map of supervised tuning, synthetic data, preferences, reinforcement learning, safety, agent trajectories, distillation, and continual improvement.</summary>
   </entry>
 </feed>
